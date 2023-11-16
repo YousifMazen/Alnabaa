@@ -5,10 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naba Alrahma</title>
-
+    <!-- tiny-slider link -->
+    <link rel="stylesheet" href="../css/tiny-slider.css">
+    <!-- AOS link -->
+    <link rel="stylesheet" href="../css/aos.css">
+    <!-- main bootstrap style  -->
     <link href="../css/main.min.css" rel="stylesheet">
+    <!-- Global styles  -->
+    <link href="../css/global.css" rel="stylesheet">
 
     <style>
+        /* GLOBAL STYLES */
+
+        body {
+            padding-top: 3rem;
+            color: rgb(var(--bs-tertiary-color-rgb));
+        }
+
+        /* tiny-slider style */
+        .tns-nav {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        .tns-nav>[aria-controls] {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            margin: 0 5px;
+            border-radius: 50%;
+            background: #ddd;
+            border: 0;
+        }
+
+        .tns-nav>.tns-nav-active {
+            background-color: var(--bs-primary);
+        }
+
+        .tns-item {
+            text-align: center;
+        }
+
+        /* CUSTOMIZE THE CAROUSEL */
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -17,25 +56,17 @@
             user-select: none;
         }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+        .carousel {
+            margin-bottom: 4rem;
         }
 
-        .b-example-divider {
-            width: 100%;
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
         }
 
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
+        .carousel-item {
+            height: 32rem;
         }
 
         .bi {
@@ -43,85 +74,43 @@
             fill: currentColor;
         }
 
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        /* GLOBAL STYLES
--------------------------------------------------- */
-        /* Padding below the footer and lighter body text */
-
-        body {
-            padding-top: 3rem;
-            color: rgb(var(--bs-tertiary-color-rgb));
-        }
-
-
-        /* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-        /* Carousel base class */
-        .carousel {
-            margin-bottom: 4rem;
-        }
-
-        /* Since positioning the image, we need to help out the caption */
-        .carousel-caption {
-            bottom: 3rem;
-            z-index: 10;
-        }
-
-        /* Declare heights because of positioning of img element */
-        .carousel-item {
-            height: 32rem;
-        }
-
-
-        /* MARKETING CONTENT
--------------------------------------------------- */
-
-        /* Center align the text within the three columns below the carousel */
-        .marketing .col-lg-4 {
+        /* CUSTOMIZE THE MAIN CONTAINER */
+        .main-container .col-lg-4 {
             margin-bottom: 1.5rem;
             text-align: center;
         }
 
-        /* rtl:begin */
-        .marketing .col-lg-4 p {
+        .main-container .col-lg-4 p {
             margin-right: .75rem;
             margin-left: .75rem;
         }
 
-        /* rtl:end */
+        /* our brands start  */
 
+        .our-barnds .brands_logos {
+            padding-top: 20px;
+        }
 
-        /* Featurettes
-------------------------- */
+        .our-barnds .brands_logos img {
+            margin: 0 auto;
+            width: 70%;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+            mix-blend-mode: color-burn;
+        }
+
+        /* Featurettes */
         .features-image-wrapper {
             position: relative;
             overflow: hidden;
         }
 
-        .overlay{
+        .overlay {
             position: absolute;
             z-index: 1;
             width: 100%;
             height: 100%;
-            background-color:rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.2);
             opacity: 0;
             transition: all 250ms ease-in-out;
         }
@@ -146,12 +135,6 @@
             width: 50%;
         }
 
-        .featurette-divider {
-            margin: 5rem 0;
-            /* Space out the Bootstrap <hr> more */
-        }
-
-        /* Thin out the marketing headings */
         /* rtl:begin:remove */
         .featurette-heading {
             letter-spacing: -.05rem;
@@ -159,10 +142,15 @@
 
         /* rtl:end:remove */
 
-        /* RESPONSIVE CSS
--------------------------------------------------- */
+        /* RESPONSIVE CSS */
 
         @media (min-width: 40em) {
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
 
             /* Bump up size of carousel content */
             .carousel-caption p {
@@ -185,6 +173,7 @@
 </head>
 
 <body>
+    <!-- navbar start -->
     <header data-bs-theme="light">
         <nav class="navbar navbar-expand-md fixed-top bg-primary">
             <div class="container-fluid">
@@ -198,8 +187,19 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Chees</a></li>
+                                <li><a class="dropdown-item" href="#">Milk</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">All Products</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">profile</a>
@@ -228,9 +228,12 @@
             </div>
         </nav>
     </header>
+    <!-- navbar end -->
 
     <main>
-        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <!-- Carousel start -->
+        <div data-aos="fade-down" data-aos-duration="1500" id="myCarousel" class="carousel slide mb-6"
+            data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1">
@@ -291,15 +294,49 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!-- Carousel end -->
 
+        <div class="container main-container">
 
-        <!-- Marketing messaging and featurettes
-  ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
+            <!-- our brands start -->
+            <div class="row our-barnds" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="text-center my-5">Our Brands</h1>
+                <div class="brands_logos">
+                    <div class="brands-slider">
+                        <div class="logo">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="logo">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="logo">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="logo">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="logo">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="logo">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                    </div>
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- our brands end -->
 
-        <div class="container marketing">
-            <!-- Three columns of text below the carousel -->
-            <div class="row">
+            <hr class="section-divider">
+            <!-- top-products start -->
+            <div class="row" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="text-center mb-5">Our popular Products</h1>
                 <div class="col-lg-4">
                     <div class="features-image-wrapper">
                         <div class="overlay"></div>
@@ -311,7 +348,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="features-image-wrapper">
                         <div class="overlay"></div>
@@ -323,7 +359,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="features-image-wrapper">
                         <div class="overlay"></div>
@@ -335,15 +370,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.col-lg-4 -->
-            </div><!-- /.row -->
+            </div>
+            <!-- top-products end -->
 
+            <hr class="section-divider">
 
-            <!-- START THE FEATURETTES -->
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
+            <!-- featurette start -->
+            <div class="row featurette mb-5" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="text-center mb-5">What makes us different</h1>
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
                             class="text-body-secondary">It’ll blow your mind.</span></h2>
@@ -362,9 +396,7 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
+            <div class="row featurette mb-5" data-aos="fade-up" data-aos-duration="1500">
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span
                             class="text-body-secondary">See for yourself.</span></h2>
@@ -383,9 +415,7 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
+            <div class="row featurette" data-aos="fade-up" data-aos-duration="1500">
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
                             class="text-body-secondary">Checkmate.</span></h2>
@@ -405,16 +435,138 @@
                     </svg>
                 </div>
             </div>
+            <hr class="section-divider">
+            <!-- featurette end -->
 
-            <hr class="featurette-divider">
+            <!-- New products start -->
+            <div class="container" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="text-center mb-5">New Products</h1>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+                    <div class="col">
+                        <div class="card shadow">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk
+                                    of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk
+                                    of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk
+                                    of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk
+                                    of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk
+                                    of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk
+                                    of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- New products end -->
 
-            <!-- /END THE FEATURETTES -->
 
-        </div><!-- /.container -->
+            <hr class="section-divider">
 
+        </div>
 
         <!-- FOOTER -->
-        <div class="container">
+        <div class="container" data-aos="fade" data-aos-duration="1500">
             <footer>
                 <div class="row">
                     <div class="col-6 col-md-2 mb-3">
@@ -488,11 +640,21 @@
                 </div>
             </footer>
         </div>
+
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
+    <!-- jQuery link  -->
+    <script src="../js/packages/jquery.min.js"></script>
+    <!-- tiny-slider Link -->
+    <script src="../js/packages/tiny-slider.js"></script>
+    <!-- AOS Link -->
+    <script src="../js//packages/aos.js"></script>
+    <!-- main.js link  -->
+    <script src="../js/main.js"></script>
+    <!-- current page js -->
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
