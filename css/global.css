@@ -12,6 +12,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+ h1 {
+     font-weight: 700;
+ }
+
 .section-divider {
     margin: 5rem 0;
 }
