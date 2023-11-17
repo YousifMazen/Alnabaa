@@ -20,11 +20,11 @@ $container-max-widths: (
     xxl: 1650px
 );
 
-$box-shadow: 0 .5rem 1rem rgba($primary, .15);
-$box-shadow-sm: 0 .125rem .25rem rgba($primary, .075);
-$box-shadow-lg: 0 1rem 3rem rgba($primary, .175);
-$box-shadow-inset: inset 0 1px 2px rgba($primary, .075);
+$box-shadow: 0 .5rem 1rem rgba($secondary, .15);
+$box-shadow-sm: 0 .125rem .25rem rgba($secondary, .075);
+$box-shadow-lg: 0 1rem 3rem rgba($secondary, .175);
+$box-shadow-inset: inset 0 1px 2px rgba($secondary, .075);
 
-$border-color: #3ce6a8be;
+$border-color: #0116fe83;
 
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import '../bootstrap/scss/bootstrap';

@@ -15,11 +15,8 @@
     <link href="../css/global.css" rel="stylesheet">
 
     <style>
-        /* GLOBAL STYLES */
-
         body {
             padding-top: 3rem;
-            color: rgb(var(--bs-tertiary-color-rgb));
         }
 
         /* tiny-slider style */
@@ -39,7 +36,7 @@
         }
 
         .tns-nav>.tns-nav-active {
-            background-color: var(--bs-primary);
+            background-color: var(--bs-secondary);
         }
 
         .tns-item {
@@ -87,16 +84,22 @@
 
         /* our brands start  */
 
-        .our-barnds .brands_logos {
+        .slider-items-wrapper {
             padding-top: 20px;
         }
 
-        .our-barnds .brands_logos img {
+        .slider-items-wrapper img {
             margin: 0 auto;
             width: 70%;
             aspect-ratio: 3/2;
             object-fit: contain;
             mix-blend-mode: color-burn;
+        }
+
+        /* statistics styles */
+        .statistics-wrapper {
+            background: rgb(60, 230, 169);
+            background: linear-gradient(90deg, rgba(60, 230, 169, 1) 5%, rgba(1, 24, 254, 1) 100%);
         }
 
         /* Featurettes */
@@ -299,31 +302,31 @@
         <div class="container main-container">
 
             <!-- our brands start -->
-            <div class="row our-barnds" data-aos="fade-up" data-aos-duration="1500">
+            <div class="row" data-aos="fade-up" data-aos-duration="1500">
                 <h1 class="text-center my-5">Our Brands</h1>
-                <div class="brands_logos">
+                <div class="slider-items-wrapper">
                     <div class="brands-slider">
-                        <div class="logo">
+                        <div class="slider-item">
                             <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
                                 alt="image">
                         </div>
-                        <div class="logo">
+                        <div class="slider-item">
                             <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
                                 alt="image">
                         </div>
-                        <div class="logo">
+                        <div class="slider-item">
                             <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
                                 alt="image">
                         </div>
-                        <div class="logo">
+                        <div class="slider-item">
                             <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
                                 alt="image">
                         </div>
-                        <div class="logo">
+                        <div class="slider-item">
                             <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
                                 alt="image">
                         </div>
-                        <div class="logo">
+                        <div class="slider-item">
                             <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
                                 alt="image">
                         </div>
@@ -334,11 +337,35 @@
             <!-- our brands end -->
 
             <hr class="section-divider">
+            <!-- Statistics start -->
+            <h1 class="text-center my-5">Statistics</h1>
+            <div class="row statistics-wrapper text-white rounded-2 p-5" data-aos="fade-up"
+                data-aos-duration="1500">
+                <div class="col-md-4 text-center" data-aos="fade-up"
+                data-aos-duration="1500">
+                    <h2 class="fw-bold">Products</h2>
+                    <p class="fs-2" id="number-counter1"></p>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up"
+                data-aos-duration="1500">
+                    <h2 class="fw-bold">Whatever</h2>
+                    <p class="fs-2" id="number-counter2"></p>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up"
+                data-aos-duration="1500">
+                    <h2 class="fw-bold">IDK</h2>
+                    <p class="fs-2" id="number-counter3"></p>
+                </div>
+            </div>
+            <!-- Statistics end -->
+            <hr class="section-divider">
+
+
             <!-- top-products start -->
             <div class="row" data-aos="fade-up" data-aos-duration="1500">
                 <h1 class="text-center mb-5">Our popular Products</h1>
                 <div class="col-lg-4">
-                    <div class="features-image-wrapper">
+                    <div class="features-image-wrapper rounded">
                         <div class="overlay"></div>
                         <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
                             alt="">
@@ -349,7 +376,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="features-image-wrapper">
+                    <div class="features-image-wrapper rounded">
                         <div class="overlay"></div>
                         <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
                             alt="">
@@ -360,7 +387,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="features-image-wrapper">
+                    <div class="features-image-wrapper rounded">
                         <div class="overlay"></div>
                         <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
                             alt="">
@@ -386,9 +413,9 @@
                         prose here.</p>
                 </div>
                 <div class="col-md-5">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg shadow featurette-image img-fluid mx-auto rounded"
+                        width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <title>Placeholder</title>
                         <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
                             fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
@@ -405,9 +432,9 @@
                         how this layout would work with some actual real-world content in place.</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg shadow featurette-image img-fluid mx-auto rounded"
+                        width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <title>Placeholder</title>
                         <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
                             fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
@@ -426,9 +453,9 @@
                         look like with some actual content. Your content.</p>
                 </div>
                 <div class="col-md-5">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg shadow featurette-image img-fluid mx-auto rounded"
+                        width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <title>Placeholder</title>
                         <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
                             fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
@@ -437,6 +464,43 @@
             </div>
             <hr class="section-divider">
             <!-- featurette end -->
+
+            <!-- Categories start -->
+            <div class="row" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="text-center my-5">Categories</h1>
+                <div class="slider-items-wrapper">
+                    <div class="categories-slider">
+                        <div class="slider-item">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+                                alt="image">
+                        </div>
+                    </div>
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- Categories end -->
+
+            <hr class="section-divider">
 
             <!-- New products start -->
             <div class="container" data-aos="fade-up" data-aos-duration="1500">
@@ -560,7 +624,6 @@
             </div>
             <!-- New products end -->
 
-
             <hr class="section-divider">
 
         </div>
@@ -642,19 +705,25 @@
         </div>
 
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery link  -->
     <script src="../js/packages/jquery.min.js"></script>
     <!-- tiny-slider Link -->
     <script src="../js/packages/tiny-slider.js"></script>
     <!-- AOS Link -->
-    <script src="../js//packages/aos.js"></script>
+    <script src="../js/packages/aos.js"></script>
+    <!-- countUp Link -->
+    <script src="../js/packages/countUp.min.js" type="module"></script>
     <!-- main.js link  -->
     <script src="../js/main.js"></script>
     <!-- current page js -->
-    <script src="../js/index.js"></script>
+    <script src="../js/index.js" type="module"></script>
 </body>
 
 </html>
+
+<!-- TODO  
+    Make all packages local 
+
+-->
