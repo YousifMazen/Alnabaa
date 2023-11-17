@@ -1,4 +1,16 @@
 /* styles for all pages */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/tsc/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .section-divider {
     margin: 5rem 0;
