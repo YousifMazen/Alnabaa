@@ -102,43 +102,32 @@
             background: linear-gradient(90deg, rgba(60, 230, 169, 1) 5%, rgba(1, 24, 254, 1) 100%);
         }
 
-        /* Featurettes */
+        /* Our popular Products */
         .features-image-wrapper {
             position: relative;
             overflow: hidden;
         }
 
-        .overlay {
-            position: absolute;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transition: all 250ms ease-in-out;
-        }
-
         .features-image-wrapper img {
             max-width: 100%;
+            filter: brightness(100%);
             transform: scale(115%);
             transition: all 250ms ease-in-out;
         }
 
         .features-image-wrapper:hover img {
             transform: scale(100%);
-        }
-
-        .features-image-wrapper:hover .overlay {
-            opacity: 1;
+            filter: brightness(80%);
         }
 
         .image-content {
             position: absolute;
             top: 20%;
-            width: 50%;
+            width: 60%;
+            font-size: 1.4rem;
         }
 
-        /* rtl:begin:remove */
+        /* Featurettes */
         .featurette-heading {
             letter-spacing: -.05rem;
         }
@@ -147,15 +136,14 @@
 
         /* RESPONSIVE CSS */
 
-        @media (min-width: 40em) {
+        @media screen and (min-width: 40em) {
 
-            @media (min-width: 768px) {
+            @media screen and (min-width: 768px) {
                 .bd-placeholder-img-lg {
                     font-size: 3.5rem;
                 }
             }
 
-            /* Bump up size of carousel content */
             .carousel-caption p {
                 margin-bottom: 1.25rem;
                 font-size: 1.25rem;
@@ -167,9 +155,44 @@
             }
         }
 
-        @media (min-width: 62em) {
+        @media screen and (min-width: 62em) {
             .featurette-heading {
                 margin-top: 7rem;
+            }
+        }
+
+        @media screen and (width < 1700px) {
+            .image-content {
+                top: 10%;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media screen and (width < 1200px) {
+            .image-content {
+                top: 10%;
+                font-size: 1.05rem;
+            }
+        }
+
+        @media screen and (width < 992px) {
+            .image-content {
+                top: 10%;
+                font-size: 1.4rem;
+            }
+        }
+
+        @media screen and (width < 768px) {
+            .statistic-item:not(:last-child) {
+                margin-bottom: 2em;
+            }
+        }
+
+        @media screen and (width < 576px) {
+            .image-content {
+                top: 10%;
+                width: 65%;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -339,66 +362,59 @@
             <hr class="section-divider">
             <!-- Statistics start -->
             <h1 class="text-center my-5">Statistics</h1>
-            <div class="row statistics-wrapper text-white rounded-2 p-5" data-aos="fade-up"
-                data-aos-duration="1500">
-                <div class="col-md-4 text-center" data-aos="fade-up"
-                data-aos-duration="1500">
+            <div class="row statistics-wrapper text-white rounded-2 p-5" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col-md-4 text-center statistic-item" data-aos="fade-up" data-aos-duration="1500">
                     <h2 class="fw-bold">Products</h2>
-                    <p class="fs-2" id="number-counter1"></p>
+                    <p class="fs-2 m-0" id="number-counter1"></p>
                 </div>
-                <div class="col-md-4 text-center" data-aos="fade-up"
-                data-aos-duration="1500">
+                <div class="col-md-4 text-center statistic-item" data-aos="fade-up" data-aos-duration="1500">
                     <h2 class="fw-bold">Whatever</h2>
-                    <p class="fs-2" id="number-counter2"></p>
+                    <p class="fs-2 m-0" id="number-counter2"></p>
                 </div>
-                <div class="col-md-4 text-center" data-aos="fade-up"
-                data-aos-duration="1500">
+                <div class="col-md-4 text-center statistic-item" data-aos="fade-up" data-aos-duration="1500">
                     <h2 class="fw-bold">IDK</h2>
-                    <p class="fs-2" id="number-counter3"></p>
+                    <p class="fs-2 m-0" id="number-counter3"></p>
                 </div>
             </div>
             <!-- Statistics end -->
             <hr class="section-divider">
 
 
-            <!-- top-products start -->
+            <!-- popular-products start -->
             <div class="row" data-aos="fade-up" data-aos-duration="1500">
                 <h1 class="text-center mb-5">Our popular Products</h1>
                 <div class="col-lg-4">
                     <div class="features-image-wrapper rounded">
-                        <div class="overlay"></div>
                         <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
                             alt="">
                         <div class="image-content text-start">
-                            <p class="fs-5">And lastly this, the third column of representative placeholder content.</p>
+                            <p>And lastly this, the third column of representative placeholder content.</p>
                             <p><a class="btn btn-primary" href="#">View details »</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="features-image-wrapper rounded">
-                        <div class="overlay"></div>
                         <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
                             alt="">
                         <div class="image-content text-start">
-                            <p class="fs-5">And lastly this, the third column of representative placeholder content.</p>
+                            <p>And lastly this, the third column of representative placeholder content.</p>
                             <p><a class="btn btn-primary" href="#">View details »</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="features-image-wrapper rounded">
-                        <div class="overlay"></div>
                         <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
                             alt="">
                         <div class="image-content text-start">
-                            <p class="fs-5">And lastly this, the third column of representative placeholder content.</p>
+                            <p>And lastly this, the third column of representative placeholder content.</p>
                             <p><a class="btn btn-primary" href="#">View details »</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- top-products end -->
+            <!-- popular-products end -->
 
             <hr class="section-divider">
 

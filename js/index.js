@@ -1,6 +1,6 @@
 var slider = tns({
     container: '.brands-slider',
-    items: 5,
+    items: 1,
     slideBy: 1,
     autoplay: true,
     autoplayTimeout: 3500,
@@ -8,23 +8,22 @@ var slider = tns({
     controls: false,
     navPosition: 'bottom',
     mouseDrag: true,
-    // responsive: {
-    //     640: {
-
-    //         items: 2
-    //     },
-    //     700: {
-    //         gutter: 30
-    //     },
-    //     900: {
-    //         items: 3
-    //     }
-    // }
+    responsive: {
+        420:{
+            items: 2
+        },
+        767: {
+            items: 3
+        },
+        992: {
+            items: 5
+        }
+    }
 });
 
 var slider = tns({
     container: '.categories-slider',
-    items: 5,
+    items: 1,
     slideBy: 1,
     autoplay: true,
     autoplayTimeout: 3500,
@@ -32,18 +31,17 @@ var slider = tns({
     controls: false,
     navPosition: 'bottom',
     mouseDrag: true,
-    // responsive: {
-    //     640: {
-
-    //         items: 2
-    //     },
-    //     700: {
-    //         gutter: 30
-    //     },
-    //     900: {
-    //         items: 3
-    //     }
-    // }
+    responsive: {
+        420: {
+            items: 2
+        },
+        767: {
+            items: 3
+        },
+        992: {
+            items: 5
+        }
+    }
 });
 
 import { CountUp } from './packages/countUp.min.js';
