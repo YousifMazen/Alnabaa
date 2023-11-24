@@ -19,10 +19,6 @@
             padding-top: 3rem;
         }
 
-        .title-subTitle {
-            text-align: center;
-        }
-
         /* tiny-slider style */
         .tns-nav {
             text-align: center;
@@ -49,6 +45,7 @@
 
         /* CUSTOMIZE THE CAROUSEL */
 
+        /* temp */
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -189,10 +186,6 @@
         @media screen and (width < 768px) {
             .statistic-item:not(:last-child) {
                 margin-bottom: 2em;
-            }
-
-            .title-subTitle {
-                text-align: left;
             }
         }
 
@@ -372,7 +365,7 @@
 
             <hr class="section-divider">
             <!-- Statistics start -->
-            <div class="title-subTitle my-5">
+            <div class="title-subTitle my-5" data-aos="fade-up" data-aos-duration="1500">
                 <h1>Statistics</h1>
                 <p>idk we just need to write something here otherwise it will look so cheap</p>
             </div>
@@ -435,12 +428,12 @@
 
             <hr class="section-divider">
 
+            <div class="title-subTitle my-5" data-aos="fade" data-aos-duration="1500">
+                <h1>What makes us different</h1>
+                <p>idk we just need to write something here otherwise it will look so cheap</p>
+            </div>
             <!-- featurette start -->
-            <div class="row featurette mb-5" data-aos="fade-up" data-aos-duration="1500">
-                <div class="title-subTitle my-5">
-                    <h1>What makes us different</h1>
-                    <p>idk we just need to write something here otherwise it will look so cheap</p>
-                </div>
+            <div class="row featurette mb-5" data-aos="fade-right" data-aos-duration="1500">
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
                             class="text-body-secondary">It’ll blow your mind.</span></h2>
@@ -459,7 +452,7 @@
                 </div>
             </div>
 
-            <div class="row featurette mb-5" data-aos="fade-up" data-aos-duration="1500">
+            <div class="row featurette mb-5" data-aos="fade-left" data-aos-duration="1500">
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span
                             class="text-body-secondary">See for yourself.</span></h2>
@@ -478,7 +471,7 @@
                 </div>
             </div>
 
-            <div class="row featurette" data-aos="fade-up" data-aos-duration="1500">
+            <div class="row featurette" data-aos="fade-right" data-aos-duration="1500">
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
                             class="text-body-secondary">Checkmate.</span></h2>
@@ -542,124 +535,122 @@
             <hr class="section-divider">
 
             <!-- New products start -->
-            <div class="container" data-aos="fade-up" data-aos-duration="1500">
-                <div class="title-subTitle my-5">
-                    <h1>New Products</h1>
-                    <p>idk we just need to write something here otherwise it will look so cheap</p>
+            <div class="title-subTitle my-5" data-aos="fade-up" data-aos-duration="1500">
+                <h1>New Products</h1>
+                <p>idk we just need to write something here otherwise it will look so cheap</p>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col">
+                    <div class="card shadow">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-                    <div class="col">
-                        <div class="card shadow">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk
-                                    of the card's
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk
-                                    of the card's
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk
-                                    of the card's
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk
-                                    of the card's
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk
-                                    of the card's
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk
-                                    of the card's
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>

@@ -19,3 +19,14 @@ body {
 .section-divider {
     margin: 5rem 0;
 }
+
+.title-subTitle {
+    text-align: center;
+}
+
+@media screen and (width < 768px) {
+
+    .title-subTitle {
+        text-align: left;
+    }
+}
