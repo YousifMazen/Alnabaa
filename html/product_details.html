@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- <html lang="ar" dir="rtl"> -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naba Alrahma - Profile</title>
+    <title>Naba Alrahma - Product name</title>
     <!-- AOS link -->
     <link rel="stylesheet" href="../css/aos.css">
     <!-- main bootstrap style  -->
@@ -14,40 +15,38 @@
 
     <style>
         main {
-            margin-top: 100px;
+            margin-top: 150px;
         }
 
-        /* statistics styles */
-        .statistics-wrapper {
-            background: rgb(60, 230, 169);
-            background: linear-gradient(90deg, rgba(60, 230, 169, 1) 5%, rgba(1, 24, 254, 1) 100%);
+        .product-img {
+            max-width: 85%;
+            height: auto;
+            border: 1px solid rgba(0, 0, 0, 0.154);
         }
 
-        /* Featurettes */
-        .about-us-heading {
-            letter-spacing: -.05rem;
+        .product-price {
+            color: var(--bs-secondary);
         }
 
-        @media screen and (min-width: 40em) {
-
-            .about-us-heading {
-                font-size: 50px;
-            }
+        .product-availability {
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
-        @media screen and (min-width: 62em) {
-            .about-us-heading {
-                margin-top: 7rem;
-            }
+        .table {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid rgba(0, 0, 0, 0.154);
         }
 
-        /* temp */
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
+        td {
+            border-left: 1px solid rgba(0, 0, 0, 0.154);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.154);
+        }
+
+        th {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.154);
         }
     </style>
 
@@ -124,97 +123,44 @@
     <!-- navbar end -->
 
     <main class="container">
-
-        <!-- Statistics start -->
-        <div class="title-subTitle my-5" data-aos="fade-up" data-aos-duration="1500">
-            <h1>Statistics</h1>
-            <p>idk we just need to write something here otherwise it will look so cheap</p>
-        </div>
-        <div class="row statistics-wrapper text-white rounded-2 p-5" data-aos="fade-up" data-aos-duration="1500">
-            <div class="col-md-4 text-center statistic-item" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="fw-semibold">Products</h2>
-                <p class="fs-2 m-0" id="number-counter1"></p>
+        <!-- Product Details -->
+        <section class="row mb-5">
+            <div class="col-md-6 text-end" data-aos="fade-right" data-aos-duration="1500">
+                <img src="https://demo2.pavothemes.com/freshio/wp-content/uploads/2020/08/39.jpg" alt="Product Image"
+                    class="product-img">
             </div>
-            <div class="col-md-4 text-center statistic-item" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="fw-semibold">Whatever</h2>
-                <p class="fs-2 m-0" id="number-counter2"></p>
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1500">
+                <h2 class="mb-4"><strong>Product Title</strong></h2>
+                <p class="lead">Product Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vel magna eget elit sodales feugiat.</p>
+                <h3><strong class="product-price">$99.99</strong></h3>
+                <p class="product-availability text-success mb-4">In Stock</p>
+                <div class="product-info">
+                    <p><strong>Category:</strong> idk something</p>
+                </div>
             </div>
-            <div class="col-md-4 text-center statistic-item" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="fw-semibold">IDK</h2>
-                <p class="fs-2 m-0" id="number-counter3"></p>
-            </div>
-        </div>
-        <!-- Statistics end -->
+        </section>
+        <br>
+        <section class="row" data-aos="fade-up" data-aos-duration="1500">
+            <h3 class="text-center mb-4 fw-bold">Additional Information</h3>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th class="p-3">Weight</th>
+                        <td class="p-3">500g</td>
+                    </tr>
+                    <tr>
+                        <th class="p-3">Dimensions</th>
+                        <td class="p-3">80 × 115 × 90 cm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
         <hr class="section-divider">
-
-        <!-- about us start -->
-        <div class="title-subTitle mb-5" data-aos="fade-up" data-aos-duration="1500">
-            <h1>About Us</h1>
-            <p>idk we just need to write something here otherwise it will look so cheap</p>
-        </div>
-        <div class="row about-us mb-5" data-aos="fade-right" data-aos-duration="1500">
-
-            <div class="col-md-7">
-                <h2 class="about-us-heading fw-normal lh-1">Our Breif</h2>
-                <p class="lead">Some great placeholder content for the first about us here. Imagine some
-                    exciting
-                    prose here.</p>
-            </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg shadow about-us-image img-fluid mx-auto rounded"
-                    width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                        fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                </svg>
-            </div>
-        </div>
-
-        <div class="row about-us mb-5" data-aos="fade-left" data-aos-duration="1500">
-            <div class="col-md-7 order-md-2">
-                <h2 class="about-us-heading fw-normal lh-1">Our Vision</h2>
-                <p class="lead">Another about-us? Of course. More placeholder content here to give you an idea
-                    of
-                    how this layout would work with some actual real-world content in place.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg shadow about-us-image img-fluid mx-auto rounded"
-                    width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                        fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                </svg>
-            </div>
-        </div>
-
-        <div class="row about-us" data-aos="fade-right" data-aos-duration="1500">
-            <div class="col-md-7">
-                <h2 class="about-us-heading fw-normal lh-1">Our Mission</h2>
-                <p class="lead">And yes, this is the last block of representative placeholder content. Again,
-                    not
-                    really intended to be actually read, simply here to give you a better view of what this
-                    would
-                    look like with some actual content. Your content.</p>
-            </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg shadow about-us-image img-fluid mx-auto rounded"
-                    width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
-                        fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                </svg>
-            </div>
-        </div>
-        <hr class="section-divider">
-        <!-- about us end -->
-
 
         <!-- FOOTER -->
-        <footer class="container" data-aos="fade" data-aos-duration="1500">
+        <div class="container" data-aos="fade" data-aos-duration="1500">
             <footer>
                 <div class="row">
                     <div class="col-6 col-md-2 mb-3">
@@ -287,7 +233,7 @@
                     </ul>
                 </div>
             </footer>
-        </footer>
+        </div>
 
     </main>
     <!-- bootstrap js -->
@@ -301,7 +247,7 @@
     <!-- main.js link  -->
     <script src="../js/main.js"></script>
     <!-- current page js -->
-    <script src="../js/profile.js" type="module"></script>
+
 </body>
 
 </html>

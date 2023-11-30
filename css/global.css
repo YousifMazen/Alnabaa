@@ -4,7 +4,7 @@
     src: url('../fonts/tsc/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -12,9 +12,29 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
- h1 {
-     font-weight: 700;
- }
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.lang-menu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-menu p{
+    margin: 0;
+}
+
+.lang-flags {
+    max-width: 100%;
+    width: 20px;
+    height: 20px;
+}
+
+h1 {
+    font-weight: 700;
+}
 
 .section-divider {
     margin: 5rem 0;
